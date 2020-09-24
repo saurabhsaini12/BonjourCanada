@@ -93,5 +93,4 @@ class WebserviceTests: XCTestCase {
             }
             self.wait(for: [expectation], timeout: 5)
         }
-    
 }

@@ -7,7 +7,6 @@
 //
 
 import Foundation
-
 enum AboutMeError: LocalizedError, Equatable {
     case invalidRequestUrlString
     case invalidResponseModel

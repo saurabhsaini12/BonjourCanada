@@ -26,7 +26,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window?.rootViewController = ViewController()
         window?.makeKeyAndVisible()
     }
-
     @available(iOS 13.0, *)
     func sceneDidDisconnect(_ scene: UIScene) {
         // Called as the scene is being released by the system.

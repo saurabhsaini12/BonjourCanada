@@ -7,6 +7,7 @@
 //
 
 import Foundation
+]
 struct AboutMeRowItems: Decodable {
     var title: String
     var description: String

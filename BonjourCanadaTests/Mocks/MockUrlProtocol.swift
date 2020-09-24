@@ -9,7 +9,6 @@
 import Foundation
 
 class MockUrlProtocol: URLProtocol {
-    
     static var stubResponseData: Data?
     static var error: Error?
     
