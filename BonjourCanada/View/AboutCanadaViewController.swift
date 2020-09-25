@@ -9,30 +9,37 @@
 import UIKit
 
 class AboutCanadaViewController: UIViewController {
-
+    
     var containerView: UIView!
     var listViewModel: AboutCanadaListViewModel!
     var tableView: UITableView!
+    var refreshButton: UIBarButtonItem!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .orange
-        // Do any additional setup after loading the view.
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Refresh", style: .plain, target: self, action: #selector(onRefresh))
-        //initialise view model
-        listViewModel = AboutCanadaListViewModel.init()
-
-        setupContainer()
-        setupTableView()
-        registerTableViewCell()
         
+        setup()
         listViewModel.onRowUpdate = { [unowned self] in
             
             DispatchQueue.main.async {
                 self.navigationItem.title = self.listViewModel.title
-                 self.tableView.reloadData()
+                self.tableView.reloadData()
             }
-           
+            
         }
+    }
+    
+    // Do any additional setup after loading the view.
+    fileprivate func setup() {
+        view.backgroundColor = .orange
+       refreshButton = UIBarButtonItem(title: "Refresh", style: .plain, target: self, action: #selector(onRefresh))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Refresh", style: .plain, target: self, action: #selector(onRefresh))
+        //initialise view model
+        listViewModel = AboutCanadaListViewModel.init()
+        
+        setupContainer()
+        setupTableView()
+        registerTableViewCell()
     }
     
     @objc func onRefresh() {
@@ -40,7 +47,7 @@ class AboutCanadaViewController: UIViewController {
     }
     
     func setupContainer() {
-          containerView = UIView()
+        containerView = UIView()
         containerView.backgroundColor = .blue
         containerView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(containerView)
@@ -59,7 +66,7 @@ class AboutCanadaViewController: UIViewController {
         tableView.dataSource = self
         tableView.translatesAutoresizingMaskIntoConstraints = false
         containerView.addSubview(tableView)
-
+        
         NSLayoutConstraint.activate([
             tableView.leadingAnchor.constraint(equalTo: containerView.leadingAnchor),
             tableView.trailingAnchor.constraint(equalTo: containerView.trailingAnchor),
@@ -71,16 +78,6 @@ class AboutCanadaViewController: UIViewController {
     func registerTableViewCell() {
         tableView.register(AboutCanadaTableViewCell.self, forCellReuseIdentifier: "AboutCanadaTableViewCell")
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 }
 extension AboutCanadaViewController: UITableViewDelegate, UITableViewDataSource {
     
@@ -88,22 +85,16 @@ extension AboutCanadaViewController: UITableViewDelegate, UITableViewDataSource 
         return self.listViewModel == nil ? 0 : self.listViewModel.numberOfSections
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-       return listViewModel.numberOfRowsInSection(section)
+        return listViewModel.numberOfRowsInSection(section)
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-         guard let cell = tableView.dequeueReusableCell(withIdentifier: "AboutCanadaTableViewCell", for: indexPath) as? AboutCanadaTableViewCell else {
-                   fatalError("AboutCanadaTableViewCell not found")
-               }
-             //  let articleVM = self.listViewModel.articleAtIndex(indexPath.row)
-               cell.indexPath = indexPath as NSIndexPath
-              cell.aboutMeRowItems = self.listViewModel.rowItems[indexPath.row]
-//               cell.titleLabel.text = articleVM.title
-//               cell.descriptionLabel.text = articleVM.description
-        
-             cell.layoutIfNeeded()
-               return cell
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "AboutCanadaTableViewCell", for: indexPath) as? AboutCanadaTableViewCell else {
+            fatalError("AboutCanadaTableViewCell not found")
+        }
+        cell.indexPath = indexPath as NSIndexPath
+        cell.aboutMeRowItems = self.listViewModel.rowItems[indexPath.row]
+        cell.layoutIfNeeded()
+        return cell
     }
-    
-    
 }

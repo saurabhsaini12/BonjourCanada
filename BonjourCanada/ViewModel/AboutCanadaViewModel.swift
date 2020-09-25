@@ -19,7 +19,8 @@ class AboutCanadaListViewModel {
 }
 
 extension AboutCanadaListViewModel {
-  
+    
+    /// fetch the details from the api and update the model properties
     func initiateWebService() {
         let webService = WebService.init(urlString: AboutMeConstants.urlString)
         webService.fetchInitialDetails { [weak self] (aboutMeResponseModel, aboutMeError) in
@@ -31,6 +32,7 @@ extension AboutCanadaListViewModel {
         }
     }
     
+    /// refresh the web service
     func refreshWebService(){
         self.initiateWebService()
     }

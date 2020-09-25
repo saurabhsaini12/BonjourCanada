@@ -12,11 +12,17 @@ class WebService {
     private var urlSession: URLSession
     private var urlString: String
     
+    /// initialises the url and set the url session
+    /// - Parameters:
+    ///   - urlString: pass the url stored in constant file
+    ///   - urlSession: by default the urlsession is shared
     init(urlString: String, urlSession: URLSession = .shared) {
         self.urlString = urlString
         self.urlSession = urlSession
     }
     
+    /// fetch the detail of the only web service ie About Canada
+    /// - Parameter completionHadler: returns the about me resonse model and custom error
     func fetchInitialDetails(completionHadler:@escaping(AboutMeResponseModel?, AboutMeError?)-> Void) {
         guard let url = URL(string: urlString) else {
             completionHadler(nil,AboutMeError.invalidRequestUrlString)

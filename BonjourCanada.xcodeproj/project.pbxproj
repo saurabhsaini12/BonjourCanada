@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -34,6 +34,7 @@
 		5358DBE9251CA1A60041AB11 /* AboutCanadaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5358DBE7251CA1A60041AB11 /* AboutCanadaTableViewCell.swift */; };
 		5358DBEB251CA3780041AB11 /* AboutMeConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5358DBEA251CA3780041AB11 /* AboutMeConstants.swift */; };
 		5358DBEC251CA3780041AB11 /* AboutMeConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5358DBEA251CA3780041AB11 /* AboutMeConstants.swift */; };
+		5358DBEE251DC5BA0041AB11 /* AboutCanadaControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5358DBED251DC5BA0041AB11 /* AboutCanadaControllerTest.swift */; };
 		7A1CEE602BCFC83F9A9F4828 /* Pods_BonjourCanadaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 932EECA9F5DCE0D8ED09FBA3 /* Pods_BonjourCanadaTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -70,6 +71,7 @@
 		5358DBE3251C99860041AB11 /* AboutCanadaViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutCanadaViewModel.swift; sourceTree = "<group>"; };
 		5358DBE7251CA1A60041AB11 /* AboutCanadaTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutCanadaTableViewCell.swift; sourceTree = "<group>"; };
 		5358DBEA251CA3780041AB11 /* AboutMeConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutMeConstants.swift; sourceTree = "<group>"; };
+		5358DBED251DC5BA0041AB11 /* AboutCanadaControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutCanadaControllerTest.swift; sourceTree = "<group>"; };
 		932EECA9F5DCE0D8ED09FBA3 /* Pods_BonjourCanadaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BonjourCanadaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC0DA4C15B11801793704F93 /* Pods-BonjourCanadaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BonjourCanadaTests.release.xcconfig"; path = "Target Support Files/Pods-BonjourCanadaTests/Pods-BonjourCanadaTests.release.xcconfig"; sourceTree = "<group>"; };
 		B432278491BFDAF499EF948D /* Pods-BonjourCanadaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BonjourCanadaTests.debug.xcconfig"; path = "Target Support Files/Pods-BonjourCanadaTests/Pods-BonjourCanadaTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -167,6 +169,7 @@
 		5358DBBD251C59A30041AB11 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				5358DBED251DC5BA0041AB11 /* AboutCanadaControllerTest.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -494,6 +497,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5358DBC9251C5DA50041AB11 /* WebserviceTests.swift in Sources */,
+				5358DBEE251DC5BA0041AB11 /* AboutCanadaControllerTest.swift in Sources */,
 				5358DBD6251C624B0041AB11 /* MockUrlProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

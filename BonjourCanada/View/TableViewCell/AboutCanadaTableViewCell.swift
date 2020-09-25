@@ -23,10 +23,9 @@ class AboutCanadaTableViewCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
         // Configure the view for the selected state
-        
     }
+    
     
     override func didMoveToSuperview() {
         super.didMoveToSuperview()
@@ -121,7 +120,11 @@ class AboutCanadaTableViewCell: UITableViewCell {
        stackView.translatesAutoresizingMaskIntoConstraints = false
            return stackView
        }()
-
+    
+    /// initializes the reusable table view cell
+    /// - Parameters:
+    ///   - style: cell style
+    ///   - reuseIdentifier: reuse id
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
@@ -160,9 +163,8 @@ class AboutCanadaTableViewCell: UITableViewCell {
         horizontalStackView.addArrangedSubview(countryImageView)
         horizontalStackView.addArrangedSubview(descriptionLabel)
     }
-    
+
     required init?(coder aDecoder: NSCoder) {
-        
         super.init(coder: aDecoder)
     }
 }
