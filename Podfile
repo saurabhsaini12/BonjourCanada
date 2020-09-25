@@ -7,6 +7,7 @@ target 'BonjourCanada' do
 
   # Pods for BonjourCanada
   pod 'SwiftLint'
+  pod 'SDWebImage', '~> 5.0'
   
   target 'BonjourCanadaTests' do
     inherit! :search_paths

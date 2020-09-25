@@ -6,6 +6,7 @@
 //  Copyright © 2020 Jyoti Saini. All rights reserved.
 //
 import Foundation
+
 class WebService {
     
     private var urlSession: URLSession
@@ -24,14 +25,14 @@ class WebService {
         
         var request = URLRequest(url: url)
         request.httpMethod = "GET"
-        
+  
         let dataTask = urlSession.dataTask(with: request) { (data, reposne, error) in
             if let requestError = error {
                 completionHadler(nil, AboutMeError.failedRequest(description: requestError.localizedDescription))
                 return
             }
-            
-            if let data = data, let aboutMeResponseModel = try? JSONDecoder().decode(AboutMeResponseModel.self, from: data) {
+            let dutf8 = String(decoding: data!, as: UTF8.self).data(using: .utf8)
+            if let dataExtracted = dutf8, let aboutMeResponseModel = try? JSONDecoder().decode(AboutMeResponseModel.self, from: dataExtracted) {
             completionHadler(aboutMeResponseModel, nil)
             }else {
                 completionHadler(nil , AboutMeError.invalidResponseModel)

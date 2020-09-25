@@ -23,7 +23,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowsScene = (scene as? UIWindowScene) else { return }
         print(windowsScene)
         window = UIWindow(windowScene: windowsScene)
-        window?.rootViewController = ViewController()
+        
+        let viewcontroller = AboutCanadaViewController()
+        let navigationController = UINavigationController.init()
+        navigationController.pushViewController(viewcontroller, animated: false)
+        window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
     }
     @available(iOS 13.0, *)

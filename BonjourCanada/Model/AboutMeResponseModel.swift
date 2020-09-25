@@ -8,6 +8,6 @@
 
 import Foundation
 struct AboutMeResponseModel: Decodable {
-    let title: String
-    let rows: [AboutMeRowItems]
+    var title: String
+    var rows: [AboutMeRowItems]
 }

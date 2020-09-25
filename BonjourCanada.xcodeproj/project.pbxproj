@@ -7,12 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		20A7A2F9D5622D9AC748FB29 /* Pods_BonjourCanada.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29C2E3F4DD92DE26BC4C3672 /* Pods_BonjourCanada.framework */; };
 		5358DB8B251C4F5E0041AB11 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5358DB8A251C4F5E0041AB11 /* AppDelegate.swift */; };
 		5358DB8D251C4F5E0041AB11 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5358DB8C251C4F5E0041AB11 /* SceneDelegate.swift */; };
-		5358DB8F251C4F5E0041AB11 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5358DB8E251C4F5E0041AB11 /* ViewController.swift */; };
 		5358DB94251C4F640041AB11 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5358DB93251C4F640041AB11 /* Assets.xcassets */; };
 		5358DB97251C4F640041AB11 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5358DB95251C4F640041AB11 /* LaunchScreen.storyboard */; };
-		5358DBB0251C55170041AB11 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5358DB8E251C4F5E0041AB11 /* ViewController.swift */; };
 		5358DBB1251C55170041AB11 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5358DB8A251C4F5E0041AB11 /* AppDelegate.swift */; };
 		5358DBB2251C55170041AB11 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5358DB8C251C4F5E0041AB11 /* SceneDelegate.swift */; };
 		5358DBB5251C55170041AB11 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5358DB95251C4F640041AB11 /* LaunchScreen.storyboard */; };
@@ -27,6 +26,14 @@
 		5358DBDC251C65A80041AB11 /* AboutMeError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5358DBDA251C65A80041AB11 /* AboutMeError.swift */; };
 		5358DBDE251C69BC0041AB11 /* AboutMeRowItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5358DBDD251C69BC0041AB11 /* AboutMeRowItems.swift */; };
 		5358DBDF251C69BC0041AB11 /* AboutMeRowItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5358DBDD251C69BC0041AB11 /* AboutMeRowItems.swift */; };
+		5358DBE1251C98590041AB11 /* AboutCanadaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5358DBE0251C98590041AB11 /* AboutCanadaViewController.swift */; };
+		5358DBE2251C98590041AB11 /* AboutCanadaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5358DBE0251C98590041AB11 /* AboutCanadaViewController.swift */; };
+		5358DBE4251C99860041AB11 /* AboutCanadaViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5358DBE3251C99860041AB11 /* AboutCanadaViewModel.swift */; };
+		5358DBE5251C99860041AB11 /* AboutCanadaViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5358DBE3251C99860041AB11 /* AboutCanadaViewModel.swift */; };
+		5358DBE8251CA1A60041AB11 /* AboutCanadaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5358DBE7251CA1A60041AB11 /* AboutCanadaTableViewCell.swift */; };
+		5358DBE9251CA1A60041AB11 /* AboutCanadaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5358DBE7251CA1A60041AB11 /* AboutCanadaTableViewCell.swift */; };
+		5358DBEB251CA3780041AB11 /* AboutMeConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5358DBEA251CA3780041AB11 /* AboutMeConstants.swift */; };
+		5358DBEC251CA3780041AB11 /* AboutMeConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5358DBEA251CA3780041AB11 /* AboutMeConstants.swift */; };
 		7A1CEE602BCFC83F9A9F4828 /* Pods_BonjourCanadaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 932EECA9F5DCE0D8ED09FBA3 /* Pods_BonjourCanadaTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -41,13 +48,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		13B0795442F40E62EDB9312A /* Pods-BonjourCanada.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BonjourCanada.release.xcconfig"; path = "Target Support Files/Pods-BonjourCanada/Pods-BonjourCanada.release.xcconfig"; sourceTree = "<group>"; };
 		29C2E3F4DD92DE26BC4C3672 /* Pods_BonjourCanada.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BonjourCanada.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		2D287D14DACEBC021E0DB5B2 /* Pods-BonjourCanada.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BonjourCanada.debug.xcconfig"; path = "Target Support Files/Pods-BonjourCanada/Pods-BonjourCanada.debug.xcconfig"; sourceTree = "<group>"; };
+		49BF53E58558C4B9DBEE470A /* Pods-BonjourCanada.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BonjourCanada.debug.xcconfig"; path = "Target Support Files/Pods-BonjourCanada/Pods-BonjourCanada.debug.xcconfig"; sourceTree = "<group>"; };
 		5358DB87251C4F5E0041AB11 /* BonjourCanada.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BonjourCanada.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5358DB8A251C4F5E0041AB11 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5358DB8C251C4F5E0041AB11 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		5358DB8E251C4F5E0041AB11 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5358DB93251C4F640041AB11 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5358DB96251C4F640041AB11 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5358DB98251C4F640041AB11 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -61,9 +66,14 @@
 		5358DBD7251C65910041AB11 /* AboutMeResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutMeResponseModel.swift; sourceTree = "<group>"; };
 		5358DBDA251C65A80041AB11 /* AboutMeError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutMeError.swift; sourceTree = "<group>"; };
 		5358DBDD251C69BC0041AB11 /* AboutMeRowItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutMeRowItems.swift; sourceTree = "<group>"; };
+		5358DBE0251C98590041AB11 /* AboutCanadaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutCanadaViewController.swift; sourceTree = "<group>"; };
+		5358DBE3251C99860041AB11 /* AboutCanadaViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutCanadaViewModel.swift; sourceTree = "<group>"; };
+		5358DBE7251CA1A60041AB11 /* AboutCanadaTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutCanadaTableViewCell.swift; sourceTree = "<group>"; };
+		5358DBEA251CA3780041AB11 /* AboutMeConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutMeConstants.swift; sourceTree = "<group>"; };
 		932EECA9F5DCE0D8ED09FBA3 /* Pods_BonjourCanadaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BonjourCanadaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC0DA4C15B11801793704F93 /* Pods-BonjourCanadaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BonjourCanadaTests.release.xcconfig"; path = "Target Support Files/Pods-BonjourCanadaTests/Pods-BonjourCanadaTests.release.xcconfig"; sourceTree = "<group>"; };
 		B432278491BFDAF499EF948D /* Pods-BonjourCanadaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BonjourCanadaTests.debug.xcconfig"; path = "Target Support Files/Pods-BonjourCanadaTests/Pods-BonjourCanadaTests.debug.xcconfig"; sourceTree = "<group>"; };
+		B959D00A9561EBBF5AFDC3BC /* Pods-BonjourCanada.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BonjourCanada.release.xcconfig"; path = "Target Support Files/Pods-BonjourCanada/Pods-BonjourCanada.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20A7A2F9D5622D9AC748FB29 /* Pods_BonjourCanada.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -133,7 +144,6 @@
 				5358DBC2251C59E00041AB11 /* Model */,
 				5358DB8A251C4F5E0041AB11 /* AppDelegate.swift */,
 				5358DB8C251C4F5E0041AB11 /* SceneDelegate.swift */,
-				5358DB8E251C4F5E0041AB11 /* ViewController.swift */,
 				5358DB93251C4F640041AB11 /* Assets.xcassets */,
 				5358DB95251C4F640041AB11 /* LaunchScreen.storyboard */,
 				5358DB98251C4F640041AB11 /* Info.plist */,
@@ -197,6 +207,7 @@
 				5358DBD7251C65910041AB11 /* AboutMeResponseModel.swift */,
 				5358DBDA251C65A80041AB11 /* AboutMeError.swift */,
 				5358DBDD251C69BC0041AB11 /* AboutMeRowItems.swift */,
+				5358DBEA251CA3780041AB11 /* AboutMeConstants.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -204,6 +215,8 @@
 		5358DBC3251C59E80041AB11 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				5358DBE6251CA1770041AB11 /* TableViewCell */,
+				5358DBE0251C98590041AB11 /* AboutCanadaViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -211,6 +224,7 @@
 		5358DBC4251C59EE0041AB11 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				5358DBE3251C99860041AB11 /* AboutCanadaViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -230,13 +244,21 @@
 			path = Network;
 			sourceTree = "<group>";
 		};
+		5358DBE6251CA1770041AB11 /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				5358DBE7251CA1A60041AB11 /* AboutCanadaTableViewCell.swift */,
+			);
+			path = TableViewCell;
+			sourceTree = "<group>";
+		};
 		BAFFA3848AEB7802450C5F23 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				2D287D14DACEBC021E0DB5B2 /* Pods-BonjourCanada.debug.xcconfig */,
-				13B0795442F40E62EDB9312A /* Pods-BonjourCanada.release.xcconfig */,
 				B432278491BFDAF499EF948D /* Pods-BonjourCanadaTests.debug.xcconfig */,
 				AC0DA4C15B11801793704F93 /* Pods-BonjourCanadaTests.release.xcconfig */,
+				49BF53E58558C4B9DBEE470A /* Pods-BonjourCanada.debug.xcconfig */,
+				B959D00A9561EBBF5AFDC3BC /* Pods-BonjourCanada.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -252,6 +274,7 @@
 				5358DB83251C4F5E0041AB11 /* Sources */,
 				5358DB84251C4F5E0041AB11 /* Frameworks */,
 				5358DB85251C4F5E0041AB11 /* Resources */,
+				B9AF3A26DF456CF4901A80FB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -285,7 +308,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5358DBB8251C55170041AB11 /* Build configuration list for PBXNativeTarget "BonjourCanadaLint" */;
 			buildPhases = (
-				5358DBAE251C55170041AB11 /* [CP] Check Pods Manifest.lock */,
 				5358DBAF251C55170041AB11 /* Sources */,
 				5358DBB3251C55170041AB11 /* Frameworks */,
 				5358DBB4251C55170041AB11 /* Resources */,
@@ -413,28 +435,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		5358DBAE251C55170041AB11 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-BonjourCanada-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 		5358DBB7251C55170041AB11 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -452,6 +452,23 @@
 			shellPath = /bin/sh;
 			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${PODS_ROOT}/SwiftLint/swiftlint\"\n\n";
 		};
+		B9AF3A26DF456CF4901A80FB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BonjourCanada/Pods-BonjourCanada-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BonjourCanada/Pods-BonjourCanada-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BonjourCanada/Pods-BonjourCanada-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -460,11 +477,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				5358DBDB251C65A80041AB11 /* AboutMeError.swift in Sources */,
-				5358DB8F251C4F5E0041AB11 /* ViewController.swift in Sources */,
 				5358DB8B251C4F5E0041AB11 /* AppDelegate.swift in Sources */,
 				5358DBD3251C60A80041AB11 /* WebService.swift in Sources */,
+				5358DBE1251C98590041AB11 /* AboutCanadaViewController.swift in Sources */,
+				5358DBE8251CA1A60041AB11 /* AboutCanadaTableViewCell.swift in Sources */,
+				5358DBEB251CA3780041AB11 /* AboutMeConstants.swift in Sources */,
 				5358DBDE251C69BC0041AB11 /* AboutMeRowItems.swift in Sources */,
 				5358DB8D251C4F5E0041AB11 /* SceneDelegate.swift in Sources */,
+				5358DBE4251C99860041AB11 /* AboutCanadaViewModel.swift in Sources */,
 				5358DBD8251C65910041AB11 /* AboutMeResponseModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -483,11 +503,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				5358DBDC251C65A80041AB11 /* AboutMeError.swift in Sources */,
-				5358DBB0251C55170041AB11 /* ViewController.swift in Sources */,
 				5358DBB1251C55170041AB11 /* AppDelegate.swift in Sources */,
 				5358DBD4251C60A80041AB11 /* WebService.swift in Sources */,
+				5358DBE2251C98590041AB11 /* AboutCanadaViewController.swift in Sources */,
+				5358DBE9251CA1A60041AB11 /* AboutCanadaTableViewCell.swift in Sources */,
+				5358DBEC251CA3780041AB11 /* AboutMeConstants.swift in Sources */,
 				5358DBDF251C69BC0041AB11 /* AboutMeRowItems.swift in Sources */,
 				5358DBB2251C55170041AB11 /* SceneDelegate.swift in Sources */,
+				5358DBE5251C99860041AB11 /* AboutCanadaViewModel.swift in Sources */,
 				5358DBD9251C65910041AB11 /* AboutMeResponseModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -630,7 +653,7 @@
 		};
 		5358DBA7251C4F650041AB11 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2D287D14DACEBC021E0DB5B2 /* Pods-BonjourCanada.debug.xcconfig */;
+			baseConfigurationReference = 49BF53E58558C4B9DBEE470A /* Pods-BonjourCanada.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -650,7 +673,7 @@
 		};
 		5358DBA8251C4F650041AB11 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 13B0795442F40E62EDB9312A /* Pods-BonjourCanada.release.xcconfig */;
+			baseConfigurationReference = B959D00A9561EBBF5AFDC3BC /* Pods-BonjourCanada.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -717,7 +740,6 @@
 		};
 		5358DBB9251C55170041AB11 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2D287D14DACEBC021E0DB5B2 /* Pods-BonjourCanada.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -737,7 +759,6 @@
 		};
 		5358DBBA251C55170041AB11 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 13B0795442F40E62EDB9312A /* Pods-BonjourCanada.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

@@ -7,9 +7,9 @@
 //
 
 import Foundation
-]
+
 struct AboutMeRowItems: Decodable {
-    var title: String
-    var description: String
-    var imageHref: String
+    var title: String?
+    var description: String?
+    var imageHref: String?
 }
