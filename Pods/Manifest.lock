@@ -1,22 +1,30 @@
 PODS:
+  - ReachabilitySwift (5.0.0)
   - SDWebImage (5.9.1):
     - SDWebImage/Core (= 5.9.1)
   - SDWebImage/Core (5.9.1)
   - SwiftLint (0.40.3)
+  - Toast-Swift (5.0.1)
 
 DEPENDENCIES:
+  - ReachabilitySwift
   - SDWebImage (~> 5.0)
   - SwiftLint
+  - Toast-Swift (~> 5.0.1)
 
 SPEC REPOS:
   trunk:
+    - ReachabilitySwift
     - SDWebImage
     - SwiftLint
+    - Toast-Swift
 
 SPEC CHECKSUMS:
+  ReachabilitySwift: 985039c6f7b23a1da463388634119492ff86c825
   SDWebImage: a990c053fff71e388a10f3357edb0be17929c9c5
   SwiftLint: dfd554ff0dff17288ee574814ccdd5cea85d76f7
+  Toast-Swift: 9b6a70f28b3bf0b96c40d46c0c4b9d6639846711
 
-PODFILE CHECKSUM: a6e468b4915dca60ea2c6171d05fe644acb4acf7
+PODFILE CHECKSUM: 55918aa5c3b9bb4754108912b0293291618f6ba0
 
 COCOAPODS: 1.9.3

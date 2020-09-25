@@ -7,16 +7,50 @@
 //
 
 import UIKit
+import Reachability
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
+    var reachability: Reachability!
+    
     func application(_
         application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        setupReachability()
         return true
     }
+    
+    func setupReachability() {
+        
+       reachability = try? Reachability()
+        NotificationCenter.default.addObserver(self, selector: #selector(reachabilityChanged(note:)), name: .reachabilityChanged, object: reachability)
+        
+        do {
+            try reachability.startNotifier()
+        } catch {
+            print("could not start reachability notifier")
+        }
+    }
+    
+    @objc func reachabilityChanged(note: Notification) {
+           
+           let reachability = note.object as? Reachability
+           
+           switch reachability?.connection {
+           case .wifi, .cellular: print("Reachable");NotificationCenter.default.post(name:
+               Notification.Name("Online"), object: nil)
+               
+           case .unavailable: print("Network not reachable"); NotificationCenter.default.post(name:
+               Notification.Name("Offline"), object: nil)
+           case .some(.none):
+               break
+           case .none:
+               break
+           }
+           
+       }
 
     // MARK: UISceneSession Lifecycle
 

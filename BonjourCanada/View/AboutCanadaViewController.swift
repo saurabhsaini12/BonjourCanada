@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Toast_Swift
 
 class AboutCanadaViewController: UIViewController {
     
@@ -14,11 +15,13 @@ class AboutCanadaViewController: UIViewController {
     var listViewModel: AboutCanadaListViewModel!
     var tableView: UITableView!
     var refreshButton: UIBarButtonItem!
+    var isNetworkAvailable: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setup()
+        loadReachability()
         listViewModel.onRowUpdate = { [unowned self] in
             
             DispatchQueue.main.async {
@@ -27,6 +30,21 @@ class AboutCanadaViewController: UIViewController {
             }
             
         }
+    }
+    
+    func loadReachability() {
+        NotificationCenter.default.addObserver(self, selector: #selector(self.WhenOnline), name: NSNotification.Name("Online"), object: nil)
+         NotificationCenter.default.addObserver(self, selector: #selector(self.WhenOffline), name: NSNotification.Name("Offline"), object: nil)
+    }
+    
+    @objc func WhenOnline() {
+        isNetworkAvailable = true
+        self.view.makeToast("Network is Online")
+    }
+    
+    @objc func WhenOffline() {
+         isNetworkAvailable = false
+        self.view.makeToast("Opps!!Network is Offline")
     }
     
     // Do any additional setup after loading the view.
@@ -43,7 +61,9 @@ class AboutCanadaViewController: UIViewController {
     }
     
     @objc func onRefresh() {
+        if isNetworkAvailable {
         listViewModel.refreshWebService()
+        }
     }
     
     func setupContainer() {
