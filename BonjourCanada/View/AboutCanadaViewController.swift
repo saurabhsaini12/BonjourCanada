@@ -17,7 +17,7 @@ class AboutCanadaViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .orange
         // Do any additional setup after loading the view.
-        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Refresh", style: .plain, target: self, action: #selector(onRefresh))
         //initialise view model
         listViewModel = AboutCanadaListViewModel.init()
 
@@ -33,6 +33,10 @@ class AboutCanadaViewController: UIViewController {
             }
            
         }
+    }
+    
+    @objc func onRefresh() {
+        listViewModel.refreshWebService()
     }
     
     func setupContainer() {
@@ -96,6 +100,8 @@ extension AboutCanadaViewController: UITableViewDelegate, UITableViewDataSource 
               cell.aboutMeRowItems = self.listViewModel.rowItems[indexPath.row]
 //               cell.titleLabel.text = articleVM.title
 //               cell.descriptionLabel.text = articleVM.description
+        
+             cell.layoutIfNeeded()
                return cell
     }
     

@@ -28,7 +28,18 @@ class AboutCanadaTableViewCell: UITableViewCell {
         
     }
     
+    override func didMoveToSuperview() {
+        super.didMoveToSuperview()
+        layoutIfNeeded()
+    }
     
+    override func prepareForReuse() {
+        //set your cell's state to default here
+
+        self.title.text = nil
+        self.descriptionLabel.text = nil
+        self.countryImageView.image = nil
+    }
     
     
     var aboutMeRowItems: AboutMeRowItems? {
@@ -44,6 +55,10 @@ class AboutCanadaTableViewCell: UITableViewCell {
             
             if let country = item.imageHref {
                 countryImageView.sd_setImage(with: URL(string: country), placeholderImage: UIImage(named: "placeholder"))
+            }else{
+                if item.title != nil || item.description != nil {
+                countryImageView.image = UIImage.init(named: "placeholder")
+                }
             }
         }
     }
@@ -63,14 +78,13 @@ class AboutCanadaTableViewCell: UITableViewCell {
         label.font = UIFont.boldSystemFont(ofSize: 20)
         label.textColor = .black
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.setContentHuggingPriority(UILayoutPriority(rawValue: 240), for: .horizontal)
         label.numberOfLines = 0
         return label
     }()
     
     let title:UILabel = {
         let label = UILabel()
-        label.font = UIFont.boldSystemFont(ofSize: 14)
+        label.font = UIFont.boldSystemFont(ofSize: 24)
         label.textColor =  .white
         label.backgroundColor = #colorLiteral(red: 0.1764705926, green: 0.4980392158, blue: 0.7568627596, alpha: 1)
         label.layer.cornerRadius = 5
@@ -145,51 +159,10 @@ class AboutCanadaTableViewCell: UITableViewCell {
         
         horizontalStackView.addArrangedSubview(countryImageView)
         horizontalStackView.addArrangedSubview(descriptionLabel)
-        
-//        containerView.addSubview(countryImageView)
-//        containerView.addSubview(title)
-//        containerView.addSubview(descriptionLabel)
-//        self.contentView.addSubview(containerView)
-//        self.contentView.addSubview(countryImageView)
-//
-//
-//        containerView.centerYAnchor.constraint(equalTo:self.contentView.centerYAnchor).isActive = true
-//
-//        containerView.trailingAnchor.constraint(equalTo:self.contentView.trailingAnchor, constant:-10).isActive = true
-//        containerView.heightAnchor.constraint(equalToConstant:40).isActive = true
-//
-//        title.topAnchor.constraint(equalTo:self.containerView.topAnchor).isActive = true
-//        title.leadingAnchor.constraint(equalTo:self.containerView.leadingAnchor).isActive = true
-//        title.trailingAnchor.constraint(equalTo:self.containerView.trailingAnchor).isActive = true
-//
-//        descriptionLabel.topAnchor.constraint(equalTo:self.title.bottomAnchor).isActive = true
-//        descriptionLabel.leadingAnchor.constraint(equalTo:self.containerView.leadingAnchor).isActive = true
-//        descriptionLabel.topAnchor.constraint(equalTo:self.title.bottomAnchor).isActive = true
-//        descriptionLabel.leadingAnchor.constraint(equalTo:self.containerView.leadingAnchor).isActive = true
-//
-//        countryImageView.widthAnchor.constraint(equalToConstant:26).isActive = true
-//        countryImageView.heightAnchor.constraint(equalToConstant:26).isActive = true
-//        countryImageView.trailingAnchor.constraint(equalTo:self.contentView.trailingAnchor, constant:-20).isActive = true
-//        countryImageView.centerYAnchor.constraint(equalTo:self.contentView.centerYAnchor).isActive = true
     }
     
     required init?(coder aDecoder: NSCoder) {
         
         super.init(coder: aDecoder)
-    }
-
-}
-
-extension UIImageView {
-    func load(url: URL) {
-        DispatchQueue.global().async { [weak self] in
-            if let data = try? Data(contentsOf: url) {
-                if let image = UIImage(data: data) {
-                    DispatchQueue.main.async {
-                        self?.image = image
-                    }
-                }
-            }
-        }
     }
 }
