@@ -22,11 +22,11 @@ class AboutCanadaViewController: UIViewController {
         
         setup()
         loadReachability()
-        listViewModel.onRowUpdate = { [unowned self] in
+        listViewModel.onRowUpdate = { [weak self] in
             
             DispatchQueue.main.async {
-                self.navigationItem.title = self.listViewModel.title
-                self.tableView.reloadData()
+                self?.navigationItem.title = self?.listViewModel.title
+                self?.tableView.reloadData()
             }
             
         }
